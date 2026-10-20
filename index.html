@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Posto de Combustíveis</title>
+</head>
+<body>
+
+<script>
+    let modelo = prompt("Digite o modelo do veículo:");
+    let placa = prompt("Digite a placa do veículo:");
+    let combustivel = prompt("Digite o combustível: ETANOL ou GASOLINA");
+    let litro = Number(prompt("Digite o valor do litro:"));
+    let quantidade = Number(prompt("Digite a quantidade de litros:"));
+
+    let total = litro * quantidade;
+    let imposto = total * 0.25;
+
+    let data = new Date();
+
+    document.write("<h2>RELATÓRIO DE ABASTECIMENTO</h2>");
+    document.write("Data e Hora: " + data.toLocaleString("pt-BR") + "<br>");
+    document.write("Modelo do Veículo: " + modelo + "<br>");
+    document.write("Placa do Veículo: " + placa + "<br>");
+    document.write("Combustível: " + combustivel + "<br>");
+    document.write("Valor do Litro: R$ " + litro.toFixed(2) + "<br>");
+    document.write("Quantidade Abastecida: " + quantidade + " litros<br>");
+    document.write("Valor Total a Pagar: R$ " + total.toFixed(2) + "<br>");
+    document.write("Imposto (25%): R$ " + imposto.toFixed(2));
+</script>
+
+</body>
+</html>
